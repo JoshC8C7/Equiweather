@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Rectangle fx:id="todayShape" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="78.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#chosenToday" stroke="#0cbf18" strokeType="INSIDE" strokeWidth="3.0" width="376.0" />
+            <Label fx:id="todayLabel" layoutX="178.0" layoutY="40.0" onMouseClicked="#chosenToday" text="Today">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <children>
+            <Rectangle fx:id="tomorrowShape" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="78.0" layoutX="14.0" layoutY="18.0" onMouseClicked="#chosenTom" stroke="#2a03c6" strokeType="INSIDE" strokeWidth="3.0" width="376.0" />
+            <Label fx:id="tomorrowLabel" layoutX="162.0" layoutY="44.0" onMouseClicked="#chosenTom" text="Tomorrow">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+         <children>
+            <Rectangle fx:id="dayAfterShape" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="78.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#chosenDayAfter" stroke="#cd0000" strokeType="INSIDE" strokeWidth="3.0" width="376.0" />
+            <Label fx:id="dayAfterLabel" layoutX="166.0" layoutY="40.0" onMouseClicked="#chosenDayAfter" text="Day After">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="71.0" prefWidth="406.0" GridPane.rowIndex="6">
+         <children>
+            <ImageView fx:id="homePicture" fitHeight="82.0" fitWidth="118.0" layoutY="16.0" onMouseClicked="#changeToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@HomeIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="74.0" fitWidth="90.0" layoutX="157.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="12.0">
+               <image>
+                  <Image url="@calendar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settingsPicture" fitHeight="150.0" fitWidth="85.0" layoutX="307.0" layoutY="1.0" onMouseClicked="#changeToSettings" pickOnBounds="true" preserveRatio="true" translateX="-11.0" translateY="6.0">
+               <image>
+                  <Image url="@Horse.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="homeLabel" layoutX="43.0" layoutY="75.0" onMouseClicked="#changeToHome" text="Home" />
+            <Label layoutX="189.0" layoutY="75.0" text="Day" />
+            <Label fx:id="settingsLabel" layoutX="317.0" layoutY="75.0" onMouseClicked="#changeToSettings" text="Settings" />
+            <Line endX="200.0" layoutX="203.0" layoutY="7.0" startX="-200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="104.0" layoutY="36.0" text="Choose Day">
+               <font>
+                  <Font name="Consolas Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Line endX="200.0" layoutX="203.0" layoutY="79.0" startX="-200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="31.0" layoutY="49.0" text="Currently Chosen Day: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="chosenDayLabel" layoutX="303.0" layoutY="49.0" text="Today">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

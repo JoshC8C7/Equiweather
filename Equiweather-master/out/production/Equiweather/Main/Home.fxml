@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <AnchorPane prefHeight="103.0" prefWidth="406.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="113.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@HomeIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="92.0" fitWidth="85.0" layoutX="299.0" layoutY="-6.0" onMouseClicked="#changeScene" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Horse.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="74.0" fitWidth="93.0" layoutX="167.0" onMouseClicked="#changeToDay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@calendar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="64.0" prefHeight="15.0" prefWidth="33.0" text="Home" />
+            <Label layoutX="193.0" layoutY="66.0" onMouseClicked="#changeToDay" text="Day" />
+            <Label layoutX="320.0" layoutY="66.0" text="Settings" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="111.0" prefWidth="406.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="dayLabel" layoutX="14.0" layoutY="14.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ageLabel" layoutX="281.0" layoutY="14.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="locLabel" layoutX="14.0" layoutY="67.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="clippedLabel" layoutX="281.0" layoutY="67.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </top>
+   <center>
+      <ListView fx:id="datesList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
